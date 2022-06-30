@@ -15,15 +15,16 @@ Users should be able to:
 
 ### Screenshot
 
-for 1440 and below screen sizes - https://github.com/Youngtechie/Frontend-Mentor-Expenses-chart-component/blob/7ca40be85c2c809fea339a0a4402bce30c640fe3/Screenshot%202022-06-30%20at%2012.41.27%20PM.png
+For 1440px and below screen sizes - https://github.com/Youngtechie/Frontend-Mentor-Expenses-chart-component/blob/a5100314b32ea7a19c1e031a6cbcc425674ed18a/Screenshot%202022-06-30%20at%204.35.25%20PM.png
 
-for 1440px and above screen sizes https://github.com/Youngtechie/Frontend-Mentor-Expenses-chart-component/blob/7ca40be85c2c809fea339a0a4402bce30c640fe3/Screenshot%202022-06-30%20at%2012.41.45%20PM.png
+For 1440px and above screen sizes - https://github.com/Youngtechie/Frontend-Mentor-Expenses-chart-component/blob/a5100314b32ea7a19c1e031a6cbcc425674ed18a/Screenshot%202022-06-30%20at%204.35.39%20PM.png
 
 
 
 ### Links
 
 - Solution URL: https://github.com/Youngtechie/Frontend-Mentor-Expenses-chart-component/blob/d644929f971fbfbc339b7556f4017bd114baf509/index.html
+
 - Live Site URL: https://Frontend-Mentor-or-Expenses-chart-component.olaegbeolamilek.repl.co
 
 
