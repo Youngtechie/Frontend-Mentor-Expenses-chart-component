@@ -23,7 +23,7 @@ For 1440px and above screen sizes - https://github.com/Youngtechie/Frontend-Ment
 
 ### Links
 
-- Solution URL: https://github.com/Youngtechie/Frontend-Mentor-Expenses-chart-component/blob/d644929f971fbfbc339b7556f4017bd114baf509/index.html
+- Solution URL: https://github.com/Youngtechie/Frontend-Mentor-Expenses-chart-component/blob/8318f0ab4b03d958bec7d8c5ddc51b536f3a6e7c/index.html
 
 - Live Site URL: https://Frontend-Mentor-or-Expenses-chart-component.olaegbeolamilek.repl.co
 
