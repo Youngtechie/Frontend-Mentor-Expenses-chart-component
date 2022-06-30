@@ -6,176 +6,179 @@
 		<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
 		<title>Frontend Mentor | Expenses chart component</title>
 		<style>
-			/************************************************
-			*				     		*
-			*	  320px and 767px screen sizes	 	*
-			*						*
-			************************************************/
-				*{
-					box-sizing: border-box;
-				}
-				html{
-					padding: 0;
-					margin: 0;
-				}
-				body{
-					display: flex;
-					justify-content: center;
-					align-items: center;
-					height: 500px;
-					background: hsl(27, 66%, 92%);
-					font-family: [DM Sans](https://fonts.google.com/specimen/DM+Sans);
-					font-size: 18px;
-					font-weight: 700;
+			/************************************
+			*				     		        *
+			*	  320px and 767px screen sizes	*
+			*						            *
+			************************************/
+			*{
+				box-sizing: border-box;
+			}
+			html{
+				padding: 0;
+				margin: 0;
+			}
+			body{
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				height: 500px;
+				background: hsl(27, 66%, 92%);
+				font-family: [DM Sans](https://fonts.google.com/specimen/DM+Sans);
+				font-size: 18px;
+				font-weight: 700;
+			}
+			.container{
+				display: flex;
+				flex-flow: column wrap;
+				width: 320px;
+				margin-top: 10%;
+			}
+			.first{
+				display: flex;
+				flex-flow: row wrap;
+				background-color: hsl(10, 79%, 65%);
+				padding: 10px;
+				justify-content: space-between;
+				align-items: center;
+				border-radius: 10px;
+				color: hsl(33, 100%, 98%);
+			}
+			span{
+				display: block;
+			}
+			.lo_go{
+				height: 24px;
+				width: 36px;
+			}
+			.active{
+				margin-top: 10px;
+				background-color: hsl(33, 100%, 98%);
+				border-radius: 10px;
+				padding: 5px; 
+			}
+			.days_bars{
+				display: flex;
+				flex-flow: row wrap;
+				font-size: 14px;
+				justify-content: space-around;
+				height: 155px;
+			}
+			.day_bar{
+				text-align: center;
+				align-self: flex-end;
+			}
+			.bars{
+				border-radius: 5px;
+				width: 39px;
+			}
+			#bar_first{
+				height: 40px;
+				background-color: hsl(10, 79%, 65%);
+			}
+			#bar_second{
+				height: 75px;
+				background-color: hsl(10, 79%, 65%);
+			}
+			#bar_third{
+				height: 115px;
+				background-color: hsl(186, 34%, 60%);
+			}
+			#bar_fourth{
+				height: 65px;
+				background-color: hsl(10, 79%, 65%);
+			}
+			#bar_fifth{
+				height: 45px;
+				background-color: hsl(10, 79%, 65%);
+			}
+			#bar_sixth{
+				height: 85px;
+				background-color: hsl(10, 79%, 65%);
+			}
+			#bar_seventh{
+				height: 55px;
+				background-color: hsl(10, 79%, 65%);
+			}
+			.amount{
+				margin-bottom: 3px;
+				background-color: black;
+				color: #efefef;
+				display: none;
+			}
+			hr{
+				width: 90%;
+				margin: 10px auto;
+				align-self: center;
+			}
+			.last{
+				display: flex;
+				flex-flow: row wrap;
+				justify-content: space-between;
+				padding: 10px;
+			}
+			.add{
+				text-align: right;
+				padding-top: 20px;
+			}
+			footer{
+				text-align: center;
+			}
+			.d_b{
+				color: hsl(25, 47%, 15%);
+			}
+			#this_month{
+				font-size: 20px;
+			}
+			a:link{
+				text-decoration: none;
+			}
+			a:visited{
+				color: blue;
+			}
+			a:active{
+				color: yellow;
+			}
+			a:hover{
+				color: red;
+				text-decoration: underline;
+			}
+			.white{
+			color: hsl(28, 10%, 53%);
+			}
+			/************************************
+			*				     		        *
+			*	  1440px and above screen sizes	*
+			*						            *
+			************************************/
+			@media (min-width: 1440px){
+				body{ 
+					height: 1024px;
+					font-size: 20px;
 				}
 				.container{
 					display: flex;
 					flex-flow: column wrap;
-					width: 320px;
-					margin-top: 10%;
+					width: 450px;
+					margin: 0;
 				}
 				.first{
-					display: flex;
-					flex-flow: row wrap;
-					background-color: hsl(10, 79%, 65%);
-					padding: 10px;
-					justify-content: space-between;
-					align-items: center;
-					border-radius: 10px;
-					color: hsl(33, 100%, 98%);
-				}
-				span{
-					display: block;
+					padding: 20px;
 				}
 				.lo_go{
-					height: 24px;
-					width: 36px;
-				}
-				.active{
-					margin-top: 10px;
-					background-color: hsl(33, 100%, 98%);
-					border-radius: 10px;
-					padding: 5px; 
-				}
-				.days_bars{
-					display: flex;
-					flex-flow: row wrap;
-					font-size: 14px;
-					justify-content: space-around;
-					height: 155px;
-				}
-				.day_bar{
-					text-align: center;
-					align-self: flex-end;
-				}
-				.bars{
-					border-radius: 5px;
-					width: 39px;
-				}
-				#bar_first{
-					height: 40px;
-					background-color: hsl(10, 79%, 65%);
-				}
-				#bar_second{
-					height: 75px;
-					background-color: hsl(10, 79%, 65%);
-				}
-				#bar_third{
-					height: 115px;
-					background-color: hsl(186, 34%, 60%);
-				}
-				#bar_fourth{
-					height: 65px;
-					background-color: hsl(10, 79%, 65%);
-				}
-				#bar_fifth{
-					height: 45px;
-					background-color: hsl(10, 79%, 65%);
-				}
-				#bar_sixth{
-					height: 85px;
-					background-color: hsl(10, 79%, 65%);
-				}
-				#bar_seventh{
-					height: 55px;
-					background-color: hsl(10, 79%, 65%);
-				}
-				.amount{
-					margin-bottom: 3px;
-					background-color: black;
-					color: #efefef;
-					display: none;
-				}
-				hr{
-					width: 90%;
-					margin: 10px auto;
-					align-self: center;
-				}
-				.last{
-					display: flex;
-					flex-flow: row wrap;
-					justify-content: space-between;
-					padding: 10px;
-				}
-				.add{
-					text-align: right;
-					padding-top: 20px;
-				}
-				footer{
-					text-align: center;
-				}
-				.d_b{
-					color: hsl(25, 47%, 15%);
+				height: 48px;
+				width: 72px;
 				}
 				#this_month{
-					font-size: 20px;
+					font-size: 40px;
 				}
-				a:link{
-					text-decoration: none;
+				#balance{
+					padding-top: 20px;
 				}
-				a:visited{
-					color: blue;
+				.d_b{
+				font-size: 30px;
 				}
-				a:active{
-					color: yellow;
-				}
-				a:hover{
-					color: red;
-					text-decoration: underline;
-				}
-			/************************************************
-			*				     		*
-			*	  1440px and above screen sizes	 	*
-			*						*
-			************************************************/
-				@media (min-width: 1440px){
-					body{ 
-						height: 1024px;
-						font-size: 20px;
-					}
-					.container{
-						display: flex;
-						flex-flow: column wrap;
-						width: 450px;
-						margin: 0;
-					}
-					.first{
-						padding: 20px;
-					}
-					.lo_go{
-					height: 48px;
-					width: 72px;
-				}
-					#this_month{
-						font-size: 40px;
-					}
-					#balance{
-						padding-top: 20px;
-					}
-					.d_b{
-					font-size: 30px;
-				}
-				}
+			}
 		</style>
 	</head>
 	<body>
@@ -234,62 +237,58 @@
 
 					</section>
 
-						<section class="day_bar">
+					<section class="day_bar">
 
-							<section class="amount" id="fifth_amount"> $23.39 </section>
-							<section class="bars" id="bar_fifth" onmousemove="mouseOver(fifth_amount)" onmouseout="mouseOut(fifth_amount)"></section>
-							<section class="days">Fri</section>
+						<section class="amount" id="fifth_amount"> $23.39 </section>
+						<section class="bars" id="bar_fifth" onmousemove="mouseOver(fifth_amount)" onmouseout="mouseOut(fifth_amount)"></section>
+						<section class="days">Fri</section>
 
-						</section>
+					</section>
 
-						<section class="day_bar">
+					<section class="day_bar">
 
-							<section class="amount" id="sixth_amount"> $43.28 </section>
-							<section class="bars" id="bar_sixth" onmousemove="mouseOver(sixth_amount)" onmouseout="mouseOut(sixth_amount)"></section>
-							<section class="days">Sat</section>
+						<section class="amount" id="sixth_amount"> $43.28 </section>
+						<section class="bars" id="bar_sixth" onmousemove="mouseOver(sixth_amount)" onmouseout="mouseOut(sixth_amount)"></section>
+						<section class="days">Sat</section>
 
-						</section>
+					</section>
 
-						<section class="day_bar">
+					<section class="day_bar">
 
-							<section class="amount" id="seventh_amount"> $25.48 </section>
-							<section class="bars" id="bar_seventh" onmousemove="mouseOver(seventh_amount)" onmouseout="mouseOut(seventh_amount)">
-							</section>
-							<section class="days">Sun</section>
+						<section class="amount" id="seventh_amount"> $25.48 </section>
+						<section class="bars" id="bar_seventh" onmousemove="mouseOver(seventh_amount)" onmouseout="mouseOut(seventh_amount)"></section>
+						<section class="days">Sun</section>
+					</section>
 
-						</section>
+				</section> 
 
-					</section> 
+				<hr/>
 
-			<hr/>
+				<section class ="last">
 
-			<section class ="last">
+					<section class ="total">
 
-				<section class ="total">
+						<span>Total this month </span>
+						<span id="this_month"class="d_b">$478.33</span>
 
-					<span>Total this month </span>
-					<span id="this_month"class="d_b">$478.33</span>
+					</section>
+
+					<aside class="add">
+
+						<span class="d_b"><b>+2.4%</b></span>
+						<span>from last month</span>
+
+					</aside>
 
 				</section>
+				
+				<footer>
 
-				<aside class="add">
+				<p>Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.</p>
+				<p>Coded by <a href="https://twitter.com/OlaegbeOlamile1">YoungTechie</a>.</p>
 
-					<span class="d_b"><b>+2.4%</b></span>
-					<span>from last month</span>
-
-				</aside>
-
+				</footer>
 			</section>
-			
-			<footer>
-
-			<p>Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.</p>
-			<p>Coded by <a href="https://twitter.com/OlaegbeOlamile1">YoungTechie</a>.</p>
-
-			</footer>
-			
-			</section>
-			
 		</main>
 		
 		<!--Internal JavaScript -->
