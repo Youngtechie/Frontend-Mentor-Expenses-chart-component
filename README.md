@@ -15,9 +15,9 @@ Users should be able to:
 
 ### Screenshot
 
-https://github.com/Youngtechie/Frontend-Mentor-Expenses-chart-component/blob/7ca40be85c2c809fea339a0a4402bce30c640fe3/Screenshot%202022-06-30%20at%2012.41.27%20PM.png
+for 1440 and below screen sizes - https://github.com/Youngtechie/Frontend-Mentor-Expenses-chart-component/blob/7ca40be85c2c809fea339a0a4402bce30c640fe3/Screenshot%202022-06-30%20at%2012.41.27%20PM.png
 
-https://github.com/Youngtechie/Frontend-Mentor-Expenses-chart-component/blob/7ca40be85c2c809fea339a0a4402bce30c640fe3/Screenshot%202022-06-30%20at%2012.41.45%20PM.png
+for 1440px and above screen sizes https://github.com/Youngtechie/Frontend-Mentor-Expenses-chart-component/blob/7ca40be85c2c809fea339a0a4402bce30c640fe3/Screenshot%202022-06-30%20at%2012.41.45%20PM.png
 
 
 
