@@ -15,8 +15,9 @@ Users should be able to:
 
 ### Screenshot
 
-Screenshot 2022-06-30 at 12.41.45 PM.png
-Screenshot 2022-06-30 at 12.41.27 PM.png
+https://github.com/Youngtechie/Frontend-Mentor-Expenses-chart-component/blob/7ca40be85c2c809fea339a0a4402bce30c640fe3/Screenshot%202022-06-30%20at%2012.41.27%20PM.png
+
+https://github.com/Youngtechie/Frontend-Mentor-Expenses-chart-component/blob/7ca40be85c2c809fea339a0a4402bce30c640fe3/Screenshot%202022-06-30%20at%2012.41.45%20PM.png
 
 
 
