@@ -4,338 +4,118 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 		<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
 		<title>Frontend Mentor | Expenses chart component</title>
-		<style>
-			/************************************
-			*				     		        *
-			*	  320px and 767px screen sizes	*
-			*						            *
-			************************************/
-			*{
-				box-sizing: border-box;
-			}
-			html{
-				padding: 0;
-				margin: 0;
-			}
-			body{
-				display: flex;
-				justify-content: center;
-				align-items: center;
-				height: 500px;
-				background: hsl(27, 66%, 92%);
-				font-family: [DM Sans](https://fonts.google.com/specimen/DM+Sans);
-				font-size: 18px;
-				font-weight: 700;
-			}
-			.container{
-				display: flex;
-				flex-flow: column wrap;
-				width: 320px;
-				margin-top: 10%;
-			}
-			.first{
-				display: flex;
-				flex-flow: row wrap;
-				background-color: hsl(10, 79%, 65%);
-				padding: 15px;
-				justify-content: space-between;
-				align-items: center;
-				border-radius: 10px;
-				color: hsl(33, 100%, 98%);
-			}
-			#balance{
-				font-size: 20px;
-			}
-			span{
-				display: block;
-			}
-			.lo_go{
-				height: 24px;
-				width: 36px;
-			}
-			.active{
-				margin-top: 10px;
-				background-color: hsl(33, 100%, 98%);
-				border-radius: 10px;
-				padding: 10px; 
-			}
-			.days_bars{
-				display: flex;
-				flex-flow: row wrap;
-				font-size: 14px;
-				justify-content: space-around;
-				height: 155px;
-			}
-			.days{
-				 color: hsl(189, 5%, 74%); 
-				 padding-top: 5px;
-			}
-			.days:hover{
-				 color: black; 
-			}
-			.day_bar{
-				text-align: center;
-				align-self: flex-end;
-			}
-			.bars{
-				border-radius: 5px;
-				width: 39px;
-			}
-			#bar_first{
-				height: 40px;
-				background-color: hsl(10, 79%, 65%);
-			}
-			#bar_second{
-				height: 75px;
-				background-color: hsl(10, 79%, 65%);
-			}
-			#bar_third{
-				height: 115px;
-				background-color: hsl(186, 34%, 60%);
-			}
-			#bar_fourth{
-				height: 65px;
-				background-color: hsl(10, 79%, 65%);
-			}
-			#bar_fifth{
-				height: 45px;
-				background-color: hsl(10, 79%, 65%);
-			}
-			#bar_sixth{
-				height: 85px;
-				background-color: hsl(10, 79%, 65%);
-			}
-			#bar_seventh{
-				height: 55px;
-				background-color: hsl(10, 79%, 65%);
-			}
-			.amount{
-				margin-bottom: 3px;
-				background-color: black;
-				color: #efefef;
-				display: none;
-			}
-			hr{
-				width: 90%;
-				margin: 10px auto;
-				align-self: center;
-			}
-			.last{
-				display: flex;
-				flex-flow: row wrap;
-				justify-content: space-between;
-				padding: 10px;
-			}
-			.add{
-				text-align: right;
-				padding-top: 20px;
-			}
-			footer{
-				text-align: center;
-			}
-			.d_b{
-				color: hsl(25, 47%, 15%);
-			}
-			#this_month{
-				font-size: 20px;
-			}
-			a:link{
-				text-decoration: none;
-			}
-			a:visited{
-				color: blue;
-			}
-			a:active{
-				color: yellow;
-			}
-			a:hover{
-				color: red;
-				text-decoration: underline;
-			}
-			.white{
-				color: hsl(189, 5%, 74%);
-			}
-			.white:hover {
-				color: black; 
-			}
-			/************************************
-			*				     		        *
-			*	  1440px and above screen sizes	*
-			*						            *
-			************************************/
-			@media (min-width: 1440px){
-				body{ 
-					height: 1024px;
-					font-size: 20px;
-				}
-				.container{
-					display: flex;
-					flex-flow: column wrap;
-					width: 450px;
-					margin: 0;
-				}
-				.first{
-					padding: 20px;
-				}
-				.lo_go{
-				height: 48px;
-				width: 72px;
-				}
-				#this_month{
-					font-size: 40px;
-				}
-				#balance{
-					padding-top: 20px;
-				}
-				.d_b{
-				font-size: 30px;
-				}
-			}
-		</style>
 	</head>
 	<body>
-		<main class="container">
-
-			<section class="first">
-
-				<section class="balance">
-
-					<span>My balance</span>
-					<span id="balance">$921.48</span>
-
-				</section>
-
-				<section class="img">
-					<img src="logo.svg" alt="logo" class="lo_go" />
-				</section>
-
-			</section>
-
-
-			<section class= active>
-				<h3 class="d_b"> Spending - Last 7 days </h3>
-
-				<section class="days_bars">
-
-					<section class="day_bar">
-
-						<section class="amount" id="first_amount"> $17.45 </section>
-						<section class="bars" id="bar_first" onmousemove="mouseOver(first_amount)" onmouseout="mouseOut(first_amount)"></section>
-						<section class="days">Mon</section>
-
-					</section>
-
-					<section class="day_bar">
-
-						<section class="amount" id="second_amount"> $34.91 </section>
-						<section class="bars" id="bar_second" onmousemove="mouseOver(second_amount)" onmouseout="mouseOut(second_amount)"></section>
-						<section class="days">Tue</section>
-
-					</section>
-
-					<section class="day_bar">
-
-						<section class="amount" id="third_amount"> $52.36 </section>
-						<section class="bars" id="bar_third" onmousemove="mouseOver(third_amount)" onmouseout="mouseOut(third_amount)"></section>
-						<section class="days">Wed</section>
-
-					</section>
-
-					<section class="day_bar">
-
-						<section class="amount" id="fourth_amount">$31.07 </section>
-						<section class="bars" id="bar_fourth" onmousemove="mouseOver(fourth_amount)" onmouseout="mouseOut(fourth_amount)"></section>
-						<section class="days">Thu</section>
-
-					</section>
-
-					<section class="day_bar">
-
-						<section class="amount" id="fifth_amount"> $23.39 </section>
-						<section class="bars" id="bar_fifth" onmousemove="mouseOver(fifth_amount)" onmouseout="mouseOut(fifth_amount)"></section>
-						<section class="days">Fri</section>
-
-					</section>
-
-					<section class="day_bar">
-
-						<section class="amount" id="sixth_amount"> $43.28 </section>
-						<section class="bars" id="bar_sixth" onmousemove="mouseOver(sixth_amount)" onmouseout="mouseOut(sixth_amount)"></section>
-						<section class="days">Sat</section>
-
-					</section>
-
-					<section class="day_bar">
-
-						<section class="amount" id="seventh_amount"> $25.48 </section>
-						<section class="bars" id="bar_seventh" onmousemove="mouseOver(seventh_amount)" onmouseout="mouseOut(seventh_amount)"></section>
-						<section class="days">Sun</section>
-					</section>
-
-				</section> 
-
-				<hr/>
-
-				<section class ="last">
-
-					<section class ="total">
-
-						<span class="white">Total this month </span>
-						<span id="this_month"class="d_b">$478.33</span>
-
-					</section>
-
-					<aside class="add">
-
-						<span class="d_b"><b>+2.4%</b></span>
-						<span class="white">from last month</span>
-
-					</aside>
-
-				</section>
-				
-				<footer>
-
-				<p>Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.</p>
-				<p>Coded by <a href="https://twitter.com/OlaegbeOlamile1">YoungTechie</a>.</p>
-
-				</footer>
-			</section>
-		</main>
-		
-		<!--Internal JavaScript -->
-		<script>
-			const first_amount = document.querySelector("#first_amount");
-			const second_amount = document.querySelector("#second_amount");
-			const third_amount = document.querySelector("#third_amount");
-			const fourth_amount = document.querySelector("#fourth_amount");
-			const fifth_amount = document.querySelector("#fifth_amount");
-			const sixth_amount = document.querySelector("#sixth_amount");
-			const seventh_amount = document.querySelector("#seventh_amount");
-
-			function mouseOver(first_amount) {first_amount.style.display = "block";}
-			function mouseOut(first_amount) {first_amount.style.display = "none";}
-
-
-			function mouseOver(second_amount) {second_amount.style.display = "block";}
-			function mouseOut(second_amount) {second_amount.style.display = "none";}
-
-			function mouseOver(third_amount) {third_amount.style.display = "block";}
-			function mouseOut(third_amount) {third_amount.style.display = "none";}
-
-			function mouseOver(fourth_amount) {fourth_amount.style.display = "block";}
-			function mouseOut(fourth_amount) {fourth_amount.style.display = "none";}
-
-			function mouseOver(fifth_amount) {fifth_amount.style.display = "block";}
-			function mouseOut(fifth_amount) {fifth_amount.style.display = "none";}
-
-			function mouseOver(sixth_amount) {sixth_amount.style.display = "block";}
-			function mouseOut(sixth_amount) {sixth_amount.style.display = "none";}
-
-			function mouseOver(seventh_amount) {seventh_amount.style.display = "block";}
-			function mouseOut(seventh_amount) {seventh_amount.style.display = "none";}
-		</script>
-		<!--Internal JavaScript End-->
+    <main class="container">
+  
+  			<section class="first">
+  
+  				<section class="balance">
+  
+  					<span>My balance</span>
+  					<span id="balance">$921.48</span>
+  
+  				</section>
+  
+  				<section class="img">
+  					<img src="logo.svg" alt="logo" class="lo_go" />
+  				</section>
+  
+  			</section>
+  
+  
+  			<section class= active>
+  				<h3 class="d_b"> Spending - Last 7 days </h3>
+  
+  				<section class="days_bars">
+  
+  					<section class="day_bar">
+  
+  						<section class="amount" id="first_amount"> $17.45 </section>
+  						<section class="bars" id="bar_first" onmousemove="mouseOver(first_amount)" onmouseout="mouseOut(first_amount)"></section>
+  						<section class="days">Mon</section>
+  
+  					</section>
+  
+  					<section class="day_bar">
+  
+  						<section class="amount" id="second_amount"> $34.91 </section>
+  						<section class="bars" id="bar_second" onmousemove="mouseOver(second_amount)" onmouseout="mouseOut(second_amount)"></section>
+  						<section class="days">Tue</section>
+  
+  					</section>
+  
+  					<section class="day_bar">
+  
+  						<section class="amount" id="third_amount"> $52.36 </section>
+  						<section class="bars" id="bar_third" onmousemove="mouseOver(third_amount)" onmouseout="mouseOut(third_amount)"></section>
+  						<section class="days">Wed</section>
+  
+  					</section>
+  
+  					<section class="day_bar">
+  
+  						<section class="amount" id="fourth_amount">$31.07 </section>
+  						<section class="bars" id="bar_fourth" onmousemove="mouseOver(fourth_amount)" onmouseout="mouseOut(fourth_amount)"></section>
+  						<section class="days">Thu</section>
+  
+  					</section>
+  
+  					<section class="day_bar">
+  
+  						<section class="amount" id="fifth_amount"> $23.39 </section>
+  						<section class="bars" id="bar_fifth" onmousemove="mouseOver(fifth_amount)" onmouseout="mouseOut(fifth_amount)"></section>
+  						<section class="days">Fri</section>
+  
+  					</section>
+  
+  					<section class="day_bar">
+  
+  						<section class="amount" id="sixth_amount"> $43.28 </section>
+  						<section class="bars" id="bar_sixth" onmousemove="mouseOver(sixth_amount)" onmouseout="mouseOut(sixth_amount)"></section>
+  						<section class="days">Sat</section>
+  
+  					</section>
+  
+  					<section class="day_bar">
+  
+  						<section class="amount" id="seventh_amount"> $25.48 </section>
+  						<section class="bars" id="bar_seventh" onmousemove="mouseOver(seventh_amount)" onmouseout="mouseOut(seventh_amount)"></section>
+  						<section class="days">Sun</section>
+  					</section>
+  
+  				</section> 
+  
+  				<hr/>
+  
+  				<section class ="last">
+  
+  					<section class ="total">
+  
+  						<span class="white">Total this month </span>
+  						<span id="this_month"class="d_b">$478.33</span>
+  
+  					</section>
+  
+  					<aside class="add">
+  
+  						<span class="d_b"><b>+2.4%</b></span>
+  						<span class="white">from last month</span>
+  
+  					</aside>
+  
+  				</section>
+  				
+  				<footer>
+  
+  				<p>Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.</p>
+  				<p>Coded by <a href="https://twitter.com/OlaegbeOlamile1">YoungTechie</a>.</p>
+  
+  				</footer>
+  			</section>
+  		</main>
 	</body>
 </html>

@@ -1,0 +1,189 @@
+/************************************
+*				     		                    *
+*	  320px and 767px screen sizes	 	*
+*						                        *
+************************************/
+				*{
+					box-sizing: border-box;
+				}
+				html{
+					padding: 0;
+					margin: 0;
+				}
+				body{
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					height: 500px;
+					background: hsl(27, 66%, 92%);
+					font-family: [DM Sans](https://fonts.google.com/specimen/DM+Sans);
+					font-size: 18px;
+					font-weight: 700;
+				}
+				.container{
+					display: flex;
+					flex-flow: column wrap;
+					width: 320px;
+					margin-top: 10%;
+				}
+				.first{
+					display: flex;
+					flex-flow: row wrap;
+					background-color: hsl(10, 79%, 65%);
+					padding: 15px;
+					justify-content: space-between;
+					align-items: center;
+					border-radius: 10px;
+					color: hsl(33, 100%, 98%);
+				}
+        #balance{
+          font-size: 20px;
+        }
+				span{
+					display: block;
+				}
+				.lo_go{
+					height: 24px;
+					width: 36px;
+				}
+				.active{
+					margin-top: 10px;
+					background-color: hsl(33, 100%, 98%);
+					border-radius: 10px;
+					padding: 10px; 
+				}
+				.days_bars{
+					display: flex;
+					flex-flow: row wrap;
+					font-size: 14px;
+					justify-content: space-around;
+					height: 155px;
+				}
+        .days{
+         color: hsl(189, 5%, 74%); 
+         padding-top: 5px;
+        }
+        .days:hover{
+         color: black; 
+        }
+				.day_bar{
+					text-align: center;
+					align-self: flex-end;
+				}
+				.bars{
+					border-radius: 5px;
+					width: 39px;
+				}
+				#bar_first{
+					height: 40px;
+					background-color: hsl(10, 79%, 65%);
+				}
+				#bar_second{
+					height: 75px;
+					background-color: hsl(10, 79%, 65%);
+				}
+				#bar_third{
+					height: 115px;
+					background-color: hsl(186, 34%, 60%);
+				}
+				#bar_fourth{
+					height: 65px;
+					background-color: hsl(10, 79%, 65%);
+				}
+				#bar_fifth{
+					height: 45px;
+					background-color: hsl(10, 79%, 65%);
+				}
+				#bar_sixth{
+					height: 85px;
+					background-color: hsl(10, 79%, 65%);
+				}
+				#bar_seventh{
+					height: 55px;
+					background-color: hsl(10, 79%, 65%);
+				}
+				.amount{
+					margin-bottom: 3px;
+					background-color: black;
+					color: #efefef;
+					display: none;
+				}
+				hr{
+					width: 90%;
+					margin: 10px auto;
+					align-self: center;
+				}
+				.last{
+					display: flex;
+					flex-flow: row wrap;
+					justify-content: space-between;
+					padding: 10px;
+				}
+				.add{
+					text-align: right;
+					padding-top: 20px;
+				}
+				footer{
+					text-align: center;
+				}
+				.d_b{
+					color: hsl(25, 47%, 15%);
+				}
+				#this_month{
+					font-size: 20px;
+				}
+				a:link{
+					text-decoration: none;
+				}
+				a:visited{
+					color: blue;
+				}
+				a:active{
+					color: yellow;
+				}
+				a:hover{
+					color: red;
+					text-decoration: underline;
+				}
+        .white{
+          color: hsl(189, 5%, 74%);
+        }
+        .white:hover {
+         color: black; 
+        }
+        .bars:hover{
+         cursor: pointer; 
+        }
+/************************************
+*				     		                    *
+*	  1440px and above screen sizes	 	*
+*						                        *
+************************************/
+				@media (min-width: 1440px){
+					body{ 
+						height: 1024px;
+						font-size: 20px;
+					}
+					.container{
+						display: flex;
+						flex-flow: column wrap;
+						width: 450px;
+						margin: 0;
+					}
+					.first{
+						padding: 20px;
+					}
+					.lo_go{
+					height: 48px;
+					width: 72px;
+				}
+					#this_month{
+						font-size: 40px;
+					}
+					#balance{
+						padding-top: 20px;
+					}
+					.d_b{
+					font-size: 30px;
+				}
+				}
